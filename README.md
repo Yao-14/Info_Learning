@@ -1,6 +1,6 @@
-# 📦 Info_PyTorch
+# 📦 Info_Learning
 
-> **Learn about pytorch.**
+> **Learn about python packages.**
 
 
 ## 🌟 Requirements
