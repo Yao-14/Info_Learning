@@ -6,9 +6,10 @@
 ## 🌟 Requirements
 
 ### 1.System Requirements
-    **Ubuntu 20.04 LTS **
-    **Python 3.7**
-    **NVIDIA GeForce GTX 3060 12G**
+
+**Ubuntu 20.04 LTS**
+**Python 3.7**
+**NVIDIA GeForce GTX 3060 12G**
 
 ### 2.Installing
 - **cuda**
