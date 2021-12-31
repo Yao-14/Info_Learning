@@ -35,13 +35,13 @@ NVIDIA GeForce GTX 3060 12G
     pip install torch-geometric
     ```
 
-## ℹ️Overview
+## ℹ️ Overview
 
 
 ## ✍️ Authors
 **Jiajun Yao.**
 
-## 🚀 Usage
+## 🚀️ ️   Usage
 
 >*The correct way to use the code*
 
@@ -52,6 +52,6 @@ NVIDIA GeForce GTX 3060 12G
 
 **Can't install yet**
 
-## 💭 Feedback and Contributing
+## 💭   Feedback and Contributing
 
 **None**
