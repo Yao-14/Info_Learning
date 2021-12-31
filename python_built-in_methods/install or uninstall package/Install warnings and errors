@@ -1,0 +1,11 @@
+
+1.WARNING: Ignoring invalid distribution -ip (d:\python3.9\lib\site-packages)
+    原因：可能是之前下载库的时候没有成功或者中途退出。
+    解决方法：到提示的目录site-packages下删除~ip开头的目录，然后pip重新安装库即可。
+
+2.socket.timeout: The read operation timed out
+    原因：下载超时
+    解决方法：方法一————换镜像源下载：清华镜像源为https://pypi.tuna.tsinghua.edu.cn/simple
+                     pip install -i https://pypi.tuna.tsinghua.edu.cn/simple cupy-cuda113
+            方法二————设置超时时间
+                     pip --default-timeout=1000 install -U cupy-cuda113
