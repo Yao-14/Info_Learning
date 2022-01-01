@@ -3,7 +3,7 @@ import os
 import cv2
 
 
-tif = "/media/yao/Elements SE/BGI_Paper/Data/lasso_ssDNA_20211230/FP200000393BR_C4.tif"
+tif = "D:\BGIpy37_pytorch113\Data_lasso_ssDNA_20211230\C4\FP200000393BR_C4.tif"
 img = cv2.imread(tif, 2)
 #第二个参数是通道数和位深的参数:
 # -1 = IMREAD_UNCHANGED  # 不进行转化，比如保存为了16位的图片，读取出来仍然为16位。
