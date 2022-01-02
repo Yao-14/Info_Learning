@@ -7,7 +7,7 @@ import numpy as np
 import cv2
 
 def gamma_transfer(src, gamma=0.5):
-    '''
+    """
     伽马变换：将一张图的灰度值归至[0,1]后，对像素值做幂次方变换，主要是图像的灰度级发生改变
 
     src - 单通道的uint8类型灰度图[0, 255]
@@ -17,7 +17,7 @@ def gamma_transfer(src, gamma=0.5):
 
     Example:
     >> dst = gamma_transfer(src, gamma=0.5)
-    '''
+    """
     img = 255 * np.power(src / 255, gamma)
     img = np.around(img)
     img[img > 255] = 255
@@ -49,3 +49,5 @@ def equalhist_transfer(src, method="global", clipLimit=10):
     elif method == "local":
         clahe = cv2.createCLAHE(clipLimit=clipLimit, tileGridSize=(7, 7))
         return clahe.apply(src)
+
+
