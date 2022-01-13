@@ -7,7 +7,7 @@ with open("/home/yao/BGIpy37_pytorch113/ST_Drosophila/1_Preprocessing/LassoByUbi
     content = f.readlines()
     print(content)
 
-with gzip.open('/home/yao/BGIpy37_pytorch113/ST_Drosophila/stDrosophila/data/bdgp_flyfish.tsv.gz', 'wb') as output:
+with gzip.open('/stDrosophila-release/stDrosophila/data/bdgp_flyfish.tsv.gz', 'wb') as output:
     with io.TextIOWrapper(output, encoding='utf-8') as enc:
         enc.writelines(content)
 
