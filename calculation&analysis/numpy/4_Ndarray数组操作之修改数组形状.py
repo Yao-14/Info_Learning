@@ -17,7 +17,7 @@ import numpy as np
 a = np.arange(8)
 
 # numpy.ndarray.reshape(newshape, order='C')   可以在不改变数据的条件下修改形状.
-b = a.reshape(2,4)
+b = np.array([[1,2,4,5,6,2,1]])
 print(a,'\n',b)
 
 # numpy.ndarray.flat()  是一个数组元素迭代器，将数组中的所有数据依次输出（不管数组形状如何）。
