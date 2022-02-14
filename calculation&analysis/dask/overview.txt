@@ -1,0 +1,34 @@
+
+DASK：一个可扩展现有 Python 生态系统的并行计算库，实现在小内存条件下分析大数据（完美解决CPU运行时一天到晚内存不够用的问题），大数据分析神器。
+
+DASK支持的工具（主要）：NumPy pandas sklearn skimage XGBoost RAPIDS XArray Iris Pangeo Prefect Napari Snorkel Datashader
+                    Intake TPOT MDAnalysis Stumpy Featuretools Cesium-ML SkyPortal (Conda Forge) DataPrep LightGBM
+                    Xarray-Spatial Kearthotek SatPy Streamz Scikit-allel tsfresh
+
+安装：conda install dask
+
+DASK主要需要掌握的内容：
+    1.dask.delayed      (Dask Delayed模拟for循环并包装自定义代码 | from dask import delayed)
+        >>> from dask import delayed
+        >>> L = []
+        >>> for fn in filenames:                  # Use for loops to build up computation
+        >>>     data = delayed(load)(fn)          # Delay execution of function
+        >>>     L.append(delayed(process)(data))  # Build connections between variables
+        >>> result = delayed(summarize)(L)
+        >>> result.compute()
+
+    2.dask.array        (Dask Array模仿 NumPy | import dask.array as da)
+        >>> import dask.array as da
+        >>> f = h5py.File('myfile.hdf5')
+        >>> x = da.from_array(f['/big-data'], chunks=(1000, 1000))
+        >>> x - x.mean(axis=1).compute()
+
+    3.dask.dataframe    (Dask DataFrame模仿 Pandas | import dask.dataframe as dd)
+        >>> import dask.dataframe as dd
+        >>> df = dd.read_csv('2015-*-*.csv')
+        >>> df.groupby(df.user_id).value.mean().compute()
+
+    4.dask.bag          (Dask Bag模仿iterators, Toolz, and PySpark | import dask.bag as db)
+        >>> import dask.bag as db
+        >>> b = db.read_text('2015-*-*.json.gz').map(json.loads)
+        >>> b.pluck('name').frequencies().topk(10, lambda pair: pair[1]).compute()
