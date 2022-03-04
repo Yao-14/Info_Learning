@@ -21,6 +21,6 @@ print(df.groupby('gene1').sum())
 # 计算操作2-3：count()组内个数计算
 print(df.groupby('gene1').count())
 
-print('\n计算操作2：agg()进行numpy中的运算****************************************************************')
+print('\n计算操作2：agg()进行numpy中的运算***************************************************')
 # 计算操作3：agg()进行numpy中的运算
 print(df.groupby('gene1').agg(np.mean))
