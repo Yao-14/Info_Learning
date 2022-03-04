@@ -3,7 +3,7 @@
 下载包：pip install 要下载的包名————从https://pypi.org中找
 删除包：pip uninstall 要卸载的包名，而后可以看到一个提示Proceed (y/n)————意思就是问我们是否确定卸载，我们输入y按下回车即可开始卸载
 更新包：如果要更新包的版本，要先删除包，然后再下载包
-更新pip：py -m pip install --upgrade pip
+更新pip：python -m pip install --upgrade pip
 若pip不小心删除了，下载pip：py -m ensurepip --upgrade
 
 高级操作：
