@@ -88,6 +88,7 @@ def lasso_2d(
     point_size: int = 10
 ) -> np.ndarray:
     """
+    Pick the interested part of coordinates by interactive approach.
 
     Args:
         coords: The coordinates of points data.
