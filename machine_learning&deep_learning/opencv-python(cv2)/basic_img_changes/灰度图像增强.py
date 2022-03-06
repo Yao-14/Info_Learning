@@ -6,6 +6,7 @@
 import numpy as np
 import cv2
 
+
 def gamma_transfer(src, gamma=0.5):
     """
     伽马变换：将一张图的灰度值归至[0,1]后，对像素值做幂次方变换，主要是图像的灰度级发生改变
@@ -22,6 +23,7 @@ def gamma_transfer(src, gamma=0.5):
     img = np.around(img)
     img[img > 255] = 255
     return img.astype(np.uint8)
+
 
 def equalhist_transfer(src, method="global", clipLimit=10):
     """
@@ -50,4 +52,13 @@ def equalhist_transfer(src, method="global", clipLimit=10):
         clahe = cv2.createCLAHE(clipLimit=clipLimit, tileGridSize=(7, 7))
         return clahe.apply(src)
 
+
+ssdna_img = cv2.imread("/media/yao/Elements SE/BGI_Paper/mouse_brain/stereo/day3_brain_0110/1_Crop/ps_step/ps_ssDNA/tiff/day3_1_ssDNA_test.tif", 0)
+print(ssdna_img)
+print(ssdna_img.shape)
+img =equalhist_transfer(ssdna_img, method="global", clipLimit=10)
+
+import matplotlib.pyplot as plt
+plt.imshow(img)
+plt.show()
 
