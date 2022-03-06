@@ -85,7 +85,7 @@ def lasso_2d(
     coords: np.ndarray,
     values: np.ndarray = None,
     cmap: str = "viridis",
-    point_size: int = 10
+    point_size: int = 10,
 ) -> np.ndarray:
     """
     Pick the interested part of coordinates by interactive approach.
