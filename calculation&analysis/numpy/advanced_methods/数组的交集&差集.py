@@ -11,9 +11,15 @@ a2_rows = a2.view([('', a2.dtype)] * a2.shape[1])
 print(a1_rows)
 print(a2_rows)
 
-#   求两个数组的交集
-print(np.intersect1d(a1_rows, a2_rows).view(a1.dtype).reshape(-1, a1.shape[1]))
+# 求两个数组的交集
+inter_array = np.intersect1d(a1_rows, a2_rows).view(a1.dtype).reshape(-1, a1.shape[1])
+print(inter_array)
+# 获得交集数组的索引
+inter_array2, inter_index1, inter_index2 = np.intersect1d(a1_rows, a2_rows, return_indices=True)
+print(inter_index1)
+print(inter_index2)
 
 # 求两个数组的差集
-print(np.setdiff1d(a1_rows, a2_rows).view(a1.dtype).reshape(-1, a1.shape[1]))
+diff_array = np.setdiff1d(a1_rows, a2_rows).view(a1.dtype).reshape(-1, a1.shape[1])
+print(diff_array)
 
