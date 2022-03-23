@@ -3,15 +3,19 @@ Test whether the installation is successful pytorch.
 '''
 
 import torch
-
+from torch.backends import cudnn
 # 查看PyTorch版本
 print(f"PyTorch版本: {torch.version.__version__}")
 
-# 查看CUDA版本
+# 查看CUDA版本, 查看CUDA版本
 print(f"CUDA版本: { torch.version.cuda}")
+print(f"CUDNN版本: {cudnn.version()}")
 
 # 查看PyTorch是否可以调用当前CUDA (True or False)
 print(f"PyTorch是否可以调用当前CUDA: {torch.cuda.is_available()}")
+
+# 查看PyTorch是否可以调用当前CUDNN (True or False)
+print(f"PyTorch是否可以调用当前CUDNN: {cudnn.is_available()}")
 
 # 查看PyTorch调用的CUDA是否初始化 (True or False)
 torch.cuda.init()
